@@ -1,0 +1,56 @@
+:root {
+  // Light theme
+  --bg-color: #f4f7f6;
+  --text-color: #2c3e50;
+  --header-bg: #42556ed2;
+  --accent-color: #e67e22;
+}
+
+[data-theme='dark'] {
+  // Dark theme
+  --bg-color: #0f172a;
+  --text-color: #f1f5f9;
+  --header-bg: #1e293b;
+  --accent-color: #fb923c;
+}
+
+// 🎨 Colors
+$color-primary: #007bff;
+$color-secondary: #6c757d;
+$color-text-dark: #333;
+$color-text-light: #f4f4f4;
+$color-background: #ffffff;
+$color-border: c;
+$color-primary2: #3498db;
+$color-secondary2: #2ecc71;
+$color-accent: #e74c3c;
+$color-background2: #ecf0f1;
+$color-text: #2c3e50;
+$footer-text-color: #000000;
+$footer-link-color: #ffff99;
+$color-logo: #ffffff;
+$text-color: #1e1e1e;
+$text-color2: #000000;
+$text-muted: #8d8d8d;
+$dark-blue: #0d1b39;
+$accent: #e58411;
+$floral-white: #fffaf0;
+$title-color1: #cd3333;
+$title-color2: #87421f;
+$more: #8806ce;
+$logo-color: #8b2323;
+$footer-accent: #f6973f;
+$footer-bg: #2d2f33;
+
+// 📏 Layout Variables
+$header-height: 8rem;
+
+// 🖥️ Adaptivity Breakpoints
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 900px;
+$breakpoint-desktop: 1200px;
+
+// 🖋️ Fonts
+$font-stack-base: 'Gilroy', sans-serif;
+$font-stack-heading: 'Inter', sans-serif;
+$font-stack-footer-accent: 'DM Sans', sans-serif;

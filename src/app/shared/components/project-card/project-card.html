@@ -1,0 +1,35 @@
+<div class="project-card-inner" [@scrollReveal]="revealState()">
+  <div class="project-status" [attr.data-status]="project.status">
+    <span class="status-dot"></span>
+    <span class="status-text">{{ 'PROJECTS.STATUS.' + project.status | translate }}</span>
+  </div>
+
+  <div class="main-info">
+    <p class="p-desc">{{ project.description }}</p>
+
+    <div class="tech-stack">
+      <span class="tech-tag" *ngFor="let tech of project.technologies">
+        {{ tech }}
+      </span>
+    </div>
+  </div>
+
+  <div class="github-hub" *ngIf="project.githubUrl || project.extraLinks">
+    <span class="hub-title">GitHub Resources & Modules</span>
+    <div class="links-grid">
+      <a *ngIf="project.githubUrl" [href]="project.githubUrl" class="hub-link" target="_blank">
+        <span class="icon-folder">📁</span> Main Repository
+      </a>
+
+      <a *ngFor="let link of project.extraLinks" [href]="link.url" class="hub-link" target="_blank">
+        <span class="icon-folder">🔗</span> {{ link.label }}
+      </a>
+    </div>
+  </div>
+
+  <div class="actions" *ngIf="project.liveUrl">
+    <a [href]="project.liveUrl" class="btn-demo" target="_blank">
+      {{ 'PROJECTS.VIEW_DEMO' | translate }}
+    </a>
+  </div>
+</div>

@@ -1,0 +1,144 @@
+<!-- <header class="main-header">
+  <div class="header-content container">
+    <div class="header-logo">
+      <a routerLink="/" class="logo-link">{{ 'HEADER.LOGO_TEXT' | translate }}</a>
+    </div>
+
+    <div class="header-right-actions">
+      <nav class="desktop-nav-group">
+        <app-nav-bar></app-nav-bar>
+      </nav>
+
+      <button
+        type="button"
+        class="theme-toggle desktop-only"
+        (click)="themeService.toggleTheme()"
+        [attr.aria-label]="
+          (themeService.isDark ? 'THEME.SWITCH_LIGHT' : 'THEME.SWITCH_DARK') | translate
+        "
+      >
+        <lucide-icon [name]="themeService.isDark ? 'sun' : 'moon'"></lucide-icon>
+      </button>
+
+      <app-language-switcher class="header-lang-switcher"></app-language-switcher>
+
+      <button
+        type="button"
+        class="hamburger-icon"
+        [class.open]="isMenuOpen"
+        (click)="toggleMenu()"
+        aria-label="Toggle menu"
+        [attr.aria-expanded]="isMenuOpen"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div
+  class="mobile-menu-overlay"
+  [class.open]="isMenuOpen"
+  (click)="toggleMenu()"
+  aria-hidden="true"
+></div>
+
+<div class="mobile-menu" [class.open]="isMenuOpen" [attr.aria-hidden]="!isMenuOpen">
+  <div class="mobile-menu-content">
+    <div class="mobile-theme-wrapper">
+      <button type="button" class="theme-toggle-mobile" (click)="themeService.toggleTheme()">
+        <lucide-icon [name]="themeService.isDark ? 'sun' : 'moon'"></lucide-icon>
+        <span>
+          {{ (themeService.isDark ? 'THEME.LIGHT' : 'THEME.DARK') | translate }}
+        </span>
+      </button>
+    </div>
+
+    <app-nav-bar class="mobile-context"></app-nav-bar>
+
+    <div class="mobile-contact">
+      <a routerLink="/contacts" class="email-link"> itdev.step@gmail.com </a>
+
+      <a routerLink="/cv" class="btn btn-primary">
+        {{ 'CONTACTS.CV_BUTTON' | translate }}
+      </a>
+    </div>
+  </div>
+</div>
+-->
+
+<header class="main-header">
+  <div class="header-content container">
+    <div class="header-logo">
+      <a routerLink="/" class="logo-link">{{ 'HEADER.LOGO_TEXT' | translate }}</a>
+    </div>
+
+    <div class="header-right-actions">
+      <nav class="desktop-nav-group">
+        <app-nav-bar></app-nav-bar>
+      </nav>
+
+      @if (!isNotFoundPage()) {
+      <button
+        type="button"
+        class="theme-toggle desktop-only"
+        (click)="toggleTheme()"
+        [attr.aria-label]="
+          (isDarkThemeActive() ? 'THEME.SWITCH_LIGHT' : 'THEME.SWITCH_DARK') | translate
+        "
+      >
+        <lucide-icon [name]="isDarkThemeActive() ? 'sun' : 'moon'"></lucide-icon>
+      </button>
+      }
+
+      <app-language-switcher class="header-lang-switcher"></app-language-switcher>
+
+      <button
+        type="button"
+        class="hamburger-icon"
+        [class.open]="isMenuOpen"
+        (click)="toggleMenu()"
+        aria-label="Toggle menu"
+        [attr.aria-expanded]="isMenuOpen"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div
+  class="mobile-menu-overlay"
+  [class.open]="isMenuOpen"
+  (click)="toggleMenu()"
+  aria-hidden="true"
+></div>
+
+<div class="mobile-menu" [class.open]="isMenuOpen" [attr.aria-hidden]="!isMenuOpen">
+  <div class="mobile-menu-content">
+    @if (!isNotFoundPage()) {
+    <div class="mobile-theme-wrapper">
+      <button type="button" class="theme-toggle-mobile" (click)="toggleTheme()">
+        <lucide-icon [name]="isDarkThemeActive() ? 'sun' : 'moon'"></lucide-icon>
+        <span>
+          {{ (isDarkThemeActive() ? 'THEME.LIGHT' : 'THEME.DARK') | translate }}
+        </span>
+      </button>
+    </div>
+    }
+
+    <app-nav-bar class="mobile-context"></app-nav-bar>
+
+    <div class="mobile-contact">
+      <a routerLink="/contacts" class="email-link"> itdev.step@gmail.com </a>
+
+      <a routerLink="/cv" class="btn btn-primary">
+        {{ 'CONTACTS.CV_BUTTON' | translate }}
+      </a>
+    </div>
+  </div>
+</div>

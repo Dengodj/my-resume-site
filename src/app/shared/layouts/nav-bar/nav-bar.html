@@ -1,0 +1,15 @@
+<ul class="nav-list">
+  @for (link of navLinks; track link.path) {
+  <li class="nav-item">
+    <a
+      [routerLink]="link.path"
+      class="nav-link"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [ariaCurrentWhenActive]="'page'"
+    >
+      {{ link.label | translate }}
+    </a>
+  </li>
+  }
+</ul>

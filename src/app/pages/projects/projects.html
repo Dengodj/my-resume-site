@@ -1,0 +1,70 @@
+<section class="projects-page">
+  <div class="container">
+    <div class="container-projects">
+      <h2 class="section-title">{{ 'PROJECTS.TITLE' | translate }}</h2>
+      <p class="section-subtitle">{{ 'PROJECTS.SUBTITLE' | translate }}</p>
+    </div>
+
+    <app-project-card *ngFor="let item of projectsList" [project]="item"> </app-project-card>
+
+    <div class="projects-grid" [@listAnimation]="projectsList.length">
+      <!-- capabilities-section start -->
+      <div class="capabilities-section">
+        <h3 class="cap-title">{{ 'PROJECTS.CAPABILITIES_TITLE' | translate }}</h3>
+        <div class="cap-grid">
+          <div class="cap-card" [@scrollReveal]>
+            <div class="cap-icon-container performance">
+              <div class="glass-circle"></div>
+              <svg viewBox="0 0 24 24" class="cyber-icon">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                <circle cx="12" cy="12" r="10" class="icon-outline" />
+              </svg>
+            </div>
+            <h4>{{ 'PROJECTS.CAPABILITIES.PERFORMANCE.TITLE' | translate }}</h4>
+            <p>{{ 'PROJECTS.CAPABILITIES.PERFORMANCE.DESC' | translate }}</p>
+          </div>
+
+          <div class="cap-card" [@scrollReveal]>
+            <div class="cap-icon-container responsive">
+              <div class="glass-circle"></div>
+              <svg viewBox="0 0 24 24" class="cyber-icon">
+                <rect x="2" y="3" width="18" height="12" rx="2" />
+                <rect x="14" y="10" width="8" height="11" rx="2" />
+                <path d="M6 21h4" />
+              </svg>
+            </div>
+            <h4>{{ 'PROJECTS.CAPABILITIES.RESPONSIVE.TITLE' | translate }}</h4>
+            <p>{{ 'PROJECTS.CAPABILITIES.RESPONSIVE.DESC' | translate }}</p>
+          </div>
+
+          <div class="cap-card" [@scrollReveal]>
+            <div class="cap-icon-container design">
+              <div class="glass-circle"></div>
+              <svg viewBox="0 0 24 24" class="cyber-icon">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <h4>{{ 'PROJECTS.CAPABILITIES.UIUX.TITLE' | translate }}</h4>
+            <p>{{ 'PROJECTS.CAPABILITIES.UIUX.DESC' | translate }}</p>
+          </div>
+        </div>
+      </div>
+      <!-- capabilities-section end -->
+
+      <!-- cta section start -->
+      <section class="cta-section" [@scrollReveal]>
+        <div class="cta-content">
+          <div class="cta-glow"></div>
+          <h2 class="cta-title">{{ 'PROJECTS.CTA.TITLE' | translate }}</h2>
+          <p class="cta-subtitle">{{ 'PROJECTS.CTA.SUBTITLE' | translate }}</p>
+
+          <button class="cta-button" [routerLink]="['/contacts']">
+            <span>{{ 'PROJECTS.CTA.BUTTON' | translate }}</span>
+            <i class="lucide-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <!-- cta section end -->
+    </div>
+  </div>
+</section>

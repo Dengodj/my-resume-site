@@ -1,0 +1,51 @@
+<main class="main-layout">
+  <section class="hero-section" aria-labelledby="hero-name">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-left-column">
+          <header class="hero-text-content">
+            <p class="hero-greeting">{{ 'HERO.GREETING' | translate }}</p>
+            <h1 id="hero-name" class="hero-name">{{ 'HERO.NAME' | translate }}</h1>
+            <h2 class="hero-title">{{ 'HERO.TITLE' | translate }}</h2>
+          </header>
+
+          <div class="hero-description-wrapper">
+            <p class="hero-description">
+              {{ 'HERO.DESCRIPTION' | translate }}
+            </p>
+          </div>
+
+          <nav class="hero-actions" aria-label="Quick actions">
+            <a routerLink="/projects" class="btn btn-primary">
+              {{ 'HERO.VIEW_PROJECTS' | translate }}
+            </a>
+
+            <a
+              routerLink="/cv"
+              target="_blank"
+              class="btn btn-secondary"
+              [attr.aria-label]="'HERO.DOWNLOAD_CV' | translate"
+            >
+              {{ 'HERO.DOWNLOAD_CV' | translate }}
+            </a>
+          </nav>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <img
+            src="assets/images/1.png"
+            [alt]="('HERO.NAME' | translate) + ' - Frontend Developer'"
+            class="hero-avatar"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <app-skills></app-skills>
+    </div>
+  </section>
+</main>

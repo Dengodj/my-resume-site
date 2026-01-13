@@ -1,0 +1,172 @@
+<section class="contact-page">
+  <div class="container">
+    <div class="contact-container" [@scrollReveal]>
+      <div class="contact-header">
+        <h2 class="section-title">
+          <lucide-icon name="send"></lucide-icon>
+          {{ 'CONTACTS.TITLE' | translate }}
+        </h2>
+        <p class="section-subtitle">{{ 'CONTACTS.SUBTITLE' | translate }}</p>
+        <p class="contact-description" @fadeIn>
+          <lucide-icon name="terminal" class="tech-icon"></lucide-icon>
+          <span>{{ 'CONTACTS.DESCRIPTION' | translate }}</span>
+        </p>
+      </div>
+
+      <div class="contact-content">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form shadow-glass">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">
+                <lucide-icon name="user"></lucide-icon>
+                {{ 'CONTACTS.FORM.NAME' | translate }}
+              </label>
+              <div class="input-wrapper">
+                <input id="name" type="text" formControlName="name" placeholder="Denis Hopper" />
+                <div class="input-glow"></div>
+              </div>
+              <div
+                *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
+                class="error-message"
+              >
+                {{ 'CONTACTS.ERRORS.NAME_REQ' | translate }}
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email"> <lucide-icon name="mail"></lucide-icon> Email </label>
+              <div class="input-wrapper">
+                <input
+                  id="email"
+                  type="email"
+                  formControlName="email"
+                  placeholder="example@mail.com"
+                />
+                <div class="input-glow"></div>
+              </div>
+              <div
+                *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+                class="error-message"
+              >
+                <span *ngIf="contactForm.get('email')?.errors?.['required']">
+                  {{ 'CONTACTS.ERRORS.EMAIL_REQ' | translate }}
+                </span>
+                <span *ngIf="contactForm.get('email')?.errors?.['email']">
+                  {{ 'CONTACTS.ERRORS.EMAIL_INVALID' | translate }}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="message">
+              <lucide-icon name="message-square"></lucide-icon>
+              {{ 'CONTACTS.FORM.MESSAGE' | translate }}
+            </label>
+            <div class="input-wrapper">
+              <textarea
+                id="message"
+                formControlName="message"
+                rows="5"
+                [placeholder]="'CONTACTS.FORM.PLACEHOLDER' | translate"
+              ></textarea>
+              <div class="input-glow"></div>
+            </div>
+            <div
+              *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
+              class="error-message"
+            >
+              <span *ngIf="contactForm.get('message')?.errors?.['required']">
+                {{ 'CONTACTS.ERRORS.MSG_REQ' | translate }}
+              </span>
+              <span *ngIf="contactForm.get('message')?.errors?.['minlength']">
+                {{ 'CONTACTS.ERRORS.MSG_MIN' | translate }}
+              </span>
+            </div>
+          </div>
+
+          <button type="submit" [disabled]="contactForm.invalid || isSubmitting" class="submit-btn">
+            <ng-container *ngIf="!isSubmitting; else loading">
+              <span>{{ 'CONTACTS.FORM.SUBMIT' | translate }}</span>
+              <lucide-icon name="rocket" [class.launching]="isSubmitting"></lucide-icon>
+            </ng-container>
+            <ng-template #loading>
+              <div class="loader"></div>
+              <span>{{ 'CONTACTS.FORM.SENDING' | translate }}...</span>
+            </ng-template>
+          </button>
+
+          <div *ngIf="showSuccess" class="success-note" [@fadeSlide]>
+            <lucide-icon name="check-circle"></lucide-icon>
+            <p>
+              {{ 'CONTACTS.SUCCESS.SENT' | translate }}
+              <strong>{{ 'CONTACTS.SUCCESS.EMAIL' | translate }}</strong>
+            </p>
+          </div>
+        </form>
+
+        <div class="info-column">
+          <div class="contact-info shadow-glass">
+            <h3>{{ 'CONTACTS.SOCIAL_TITLE' | translate }}</h3>
+
+            <div class="social-wrapper">
+              <div class="social-grid">
+                <a
+                  href="https://github.com/dengodj"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-card github"
+                >
+                  <lucide-icon name="github"></lucide-icon>
+                  <span>GitHub</span>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/denis-goida-4b481a3a1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-card linkedin"
+                >
+                  <lucide-icon name="linkedin"></lucide-icon>
+                  <span>LinkedIn</span>
+                </a>
+
+                <a
+                  href="mailto:itdev.step@gmail.com"
+                  class="social-card email-link"
+                  (click)="copyEmail($event)"
+                  [class.copied]="isCopied"
+                >
+                  <lucide-icon name="at-sign"></lucide-icon>
+                  <span>Email</span>
+                  <span class="tooltip">{{ emailTooltipText }}</span>
+                </a>
+              </div>
+
+              <div class="social-image">
+                <div class="tech-decoration">
+                  <div class="circle-main">
+                    <lucide-icon name="cpu"></lucide-icon>
+                    <div class="orbit"></div>
+                    <div class="orbit"></div>
+                  </div>
+                  <div class="tech-lines"><span></span><span></span><span></span></div>
+                </div>
+                <div class="image-glow"></div>
+              </div>
+            </div>
+          </div>
+
+          <!--  Btn -->
+          <div class="cv-card shadow-glass" [@scrollReveal]>
+            <p>{{ 'HERO.DESCRIPTION' | translate }}</p>
+            <a routerLink="/cv" class="cv-download-btn">
+              <lucide-icon name="file-text"></lucide-icon>
+              {{ 'CONTACTS.CV_BUTTON' | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

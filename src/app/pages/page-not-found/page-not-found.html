@@ -1,0 +1,22 @@
+<div class="error-container">
+  <div class="stars small"></div>
+  <div class="stars medium"></div>
+  <div class="stars large"></div>
+
+  <div class="error-content">
+    <div class="code-wrapper">
+      <span class="error-code animated-float">4</span>
+      <span class="error-code animated-float animated-delay-1">0</span>
+      <span class="error-code animated-float animated-delay-2">4</span>
+    </div>
+
+    <h2 class="error-title">{{ 'ERROR.TITLE' | translate }}</h2>
+    <p class="error-text">{{ 'ERROR.TEXT' | translate }}</p>
+    <p class="error-secondary-text">{{ 'ERROR.SECONDARY_TEXT' | translate }}</p>
+
+    <a routerLink="/" class="back-home-btn">
+      <lucide-icon name="arrow-left" class="btn-icon"></lucide-icon>
+      <span class="btn-text">{{ 'ERROR.BACK_HOME' | translate }}</span>
+    </a>
+  </div>
+</div>

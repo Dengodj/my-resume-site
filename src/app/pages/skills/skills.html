@@ -1,0 +1,116 @@
+<div class="container">
+  <section class="page-section skills-page" aria-labelledby="skills-title">
+    <h2 id="skills-title" class="section-title" appScrollReveal>
+      {{ 'SKILLS.TITLE' | translate }}
+    </h2>
+    <p class="section-subtitle" appScrollReveal [revealDelay]="150">
+      {{ 'SKILLS.SUBTITLE' | translate }}
+    </p>
+
+    <div class="skills-grid">
+      <div class="skills-category" appScrollReveal [revealDelay]="300">
+        <div class="category-header">
+          <div class="icon-glow-wrapper">
+            <lucide-icon name="code-xml" class="main-cat-icon"></lucide-icon>
+          </div>
+          <h3 class="category-title">{{ 'SKILLS.CATEGORIES.FRONTEND' | translate }}</h3>
+        </div>
+
+        <div class="skills-list">
+          <app-skill-bar
+            *ngFor="let skill of getSkillsByCategory('frontend'); let i = index"
+            [skill]="skill"
+            appScrollReveal
+            [revealDelay]="350 + i * 100"
+          ></app-skill-bar>
+        </div>
+      </div>
+
+      <div class="skills-category" appScrollReveal [revealDelay]="500">
+        <div class="category-header">
+          <div class="icon-glow-wrapper">
+            <lucide-icon name="cpu" class="main-cat-icon"></lucide-icon>
+          </div>
+          <h3 class="category-title">{{ 'SKILLS.CATEGORIES.TOOLS' | translate }}</h3>
+        </div>
+
+        <div class="skills-list">
+          <app-skill-bar
+            *ngFor="let skill of getSkillsByCategory('tools'); let i = index"
+            [skill]="skill"
+            appScrollReveal
+            [revealDelay]="550 + i * 100"
+          ></app-skill-bar>
+        </div>
+      </div>
+    </div>
+
+    <div class="extra-info-grid">
+      <div class="skills-category" appScrollReveal [revealDelay]="600">
+        <div class="category-header">
+          <div class="icon-glow-wrapper">
+            <lucide-icon name="sparkles" class="main-cat-icon"></lucide-icon>
+          </div>
+          <h3 class="category-title">{{ 'SKILLS.CATEGORIES.SOFT' | translate }}</h3>
+        </div>
+
+        <div class="tags-container">
+          <div
+            class="soft-tag"
+            *ngFor="let item of softSkills; let i = index"
+            appScrollReveal
+            [revealDelay]="650 + i * 100"
+          >
+            <lucide-icon [name]="item.icon" class="tag-icon"></lucide-icon>
+            <span>{{ item.nameKey | translate }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-category" appScrollReveal [revealDelay]="700">
+        <div class="category-header">
+          <div class="icon-glow-wrapper">
+            <lucide-icon name="languages" class="main-cat-icon"></lucide-icon>
+          </div>
+          <h3 class="category-title">{{ 'SKILLS.CATEGORIES.LANGUAGES' | translate }}</h3>
+        </div>
+        <div class="lang-stack">
+          <div class="lang-item" *ngFor="let lang of languages">
+            <div class="lang-header">
+              <span class="flag">{{ lang.flag }}</span>
+              <span class="name">{{ lang.nameKey | translate }}</span>
+              <span class="level">{{ lang.levelKey | translate }}</span>
+            </div>
+            <div class="mini-progress">
+              <div class="fill" [style.width.%]="lang.percent"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="learning-path-section" appScrollReveal [revealDelay]="800">
+    <div class="category-header">
+      <div class="icon-glow-wrapper">
+        <lucide-icon name="rocket" class="main-cat-icon"></lucide-icon>
+      </div>
+      <h3 class="category-learning-title">{{ 'SKILLS.CATEGORIES.LEARNING' | translate }}</h3>
+    </div>
+
+    <div class="learning-grid">
+      <div class="learning-card" *ngFor="let tech of learningTech; let i = index">
+        <div class="learning-content">
+          <span class="tech-name">{{ tech.name }}</span>
+          <span class="tech-status">{{ tech.statusKey | translate }}</span>
+        </div>
+        <div class="learning-progress-dots">
+          <span class="dot active"></span>
+          <span class="dot active"></span>
+          <span class="dot pulse"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

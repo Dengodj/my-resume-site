@@ -1,0 +1,177 @@
+<section class="about-page" aria-labelledby="about-title">
+  <div class="container">
+    <p class="lead-text" appScrollReveal [revealDelay]="200">
+      {{ 'ABOUT.SUBTITLE' | translate }}
+    </p>
+
+    <div class="about-content">
+      <section class="vision-grid">
+        <div class="vision-card" appScrollReveal [revealDelay]="400">
+          <div class="icon-wrapper">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              class="modern-svg"
+            >
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h3>{{ 'ABOUT.VISION_FULLSTACK_TITLE' | translate }}</h3>
+          <p [innerHTML]="'ABOUT.VISION_FULLSTACK_DESC' | translate"></p>
+        </div>
+
+        <div class="vision-card" appScrollReveal [revealDelay]="600">
+          <div class="icon-wrapper">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              class="modern-svg ai-pulse"
+            >
+              <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+              <rect x="9" y="9" width="6" height="6"></rect>
+              <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"></path>
+            </svg>
+          </div>
+          <h3>{{ 'ABOUT.VISION_AI_TITLE' | translate }}</h3>
+          <p [innerHTML]="'ABOUT.VISION_AI_DESC' | translate"></p>
+        </div>
+      </section>
+
+      <div class="glass-panel philosophy-section" appScrollReveal [revealDelay]="800">
+        <div class="panel-glow"></div>
+        <h3>{{ 'ABOUT.PHILOSOPHY_TITLE' | translate }}</h3>
+
+        <div class="philosophy-items">
+          <div class="phi-item">
+            <div class="phi-icon-wrapper">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                class="phi-svg rotate-hover"
+              >
+                <path
+                  d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                ></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <div class="phi-text">
+              <strong>{{ 'ABOUT.PHILOSOPHY_ENG_TITLE' | translate }}</strong>
+              <span>{{ 'ABOUT.PHILOSOPHY_ENG_DESC' | translate }}</span>
+            </div>
+          </div>
+
+          <div class="phi-item">
+            <div class="phi-icon-wrapper">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                class="phi-svg tilt-hover"
+              >
+                <path d="m12 19 7-7 3 3-7 7-3-3Z"></path>
+                <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5Z"></path>
+                <path d="m2 2 20 20"></path>
+              </svg>
+            </div>
+            <div class="phi-text">
+              <strong>{{ 'ABOUT.PHILOSOPHY_DESIGN_TITLE' | translate }}</strong>
+              <span>{{ 'ABOUT.PHILOSOPHY_DESIGN_DESC' | translate }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="experience-timeline">
+        <h2 class="timeline-title" appScrollReveal [revealDelay]="900">
+          <svg
+            viewBox="0 0 24 24"
+            width="32"
+            height="32"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="title-icon"
+          >
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          {{ 'ABOUT.TIMELINE_TITLE' | translate }}
+        </h2>
+
+        <!-- Timeline container start! -->
+        <div class="timeline-container">
+          <div class="timeline-item" appScrollReveal [revealDelay]="1000">
+            <div class="timeline-dot current"></div>
+            <div class="time-badge active">2025 – Present</div>
+            <div class="time-content">
+              <h4>{{ 'ABOUT.UNI_TITLE' | translate }}</h4>
+              <p>{{ 'ABOUT.UNI_DESC' | translate }}</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" appScrollReveal [revealDelay]="1100">
+            <div class="timeline-dot"></div>
+            <div class="time-badge">2020 – 2024</div>
+            <div class="time-content">
+              <h4>{{ 'ABOUT.EXP_SENIOR_TITLE' | translate }}</h4>
+              <p>{{ 'ABOUT.EXP_SENIOR_DESC' | translate }}</p>
+            </div>
+          </div>
+
+          <div class="timeline-item cert-item" appScrollReveal [revealDelay]="1200">
+            <div class="timeline-dot current"></div>
+            <div class="time-badge active">{{ 'ABOUT.CERT_LABEL' | translate }}</div>
+            <div class="time-content">
+              <div class="cert-header">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="cert-icon"
+                >
+                  <circle cx="12" cy="8" r="6"></circle>
+                  <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"></path>
+                </svg>
+                <h4>{{ 'ABOUT.CERT_TITLE' | translate }}</h4>
+              </div>
+              <p>{{ 'ABOUT.CERT_DESC' | translate }}</p>
+
+              <div class="certificate-card pdf-style" (click)="openCertificate()">
+                <div class="card-glass-effect"></div>
+                <div class="cert-info">
+                  <span class="cert-status">
+                    <span class="status-dot"></span>
+                    {{ 'ABOUT.CERT_STATUS' | translate }}
+                  </span>
+                  <span class="cert-view">
+                    {{ 'ABOUT.CERT_VIEW' | translate }}
+                    <lucide-icon name="external-link"></lucide-icon>
+                  </span>
+                </div>
+
+                <div class="cert-img-container pdf-mode">
+                  <div class="pdf-placeholder">
+                    <lucide-icon name="file-text" class="big-pdf-icon"></lucide-icon>
+                    <span class="pdf-label">{{ 'ABOUT.CERT_LABEL_TECH' | translate }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Timeline container end! -->
+      </section>
+    </div>
+  </div>
+</section>

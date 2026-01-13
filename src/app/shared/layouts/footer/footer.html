@@ -1,0 +1,41 @@
+<footer class="main-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-social">
+        <a href="https://github.com/Dengodj" target="_blank" class="social-link">
+          <img src="assets/images/github.png" alt="GitHub" class="footer-icon" />
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/denis-goida-4b481a3a1/"
+          target="_blank"
+          class="social-link"
+        >
+          <img src="assets/images/social.png" alt="LinkedIn" class="footer-icon" />
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="footer-center">
+        <p class="footer-copy">&copy; {{ currentYear }} {{ 'FOOTER.RIGHTS' | translate }}.</p>
+      </div>
+
+      <div class="footer-info">
+        <p class="footer-credit">
+          {{ 'FOOTER.BUILT_WITH' | translate }} <strong>Angular</strong>
+          <img src="assets/images/angular64.png" alt="Angular Logo" class="angular-logo" />
+        </p>
+      </div>
+    </div>
+
+    <button
+      class="back-to-top"
+      [class.visible]="isScrollBtnVisible()"
+      (click)="scrollToTop()"
+      type="button"
+    >
+      <span class="back-to-top-icon">↑</span>
+      <span class="back-to-top-tooltip">{{ 'FOOTER.BACK_TO_TOP' | translate }}</span>
+    </button>
+  </div>
+</footer>

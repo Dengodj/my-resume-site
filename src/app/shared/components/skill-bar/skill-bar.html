@@ -1,0 +1,14 @@
+<div class="skill-item">
+  <div class="skill-info">
+    <span class="skill-name">{{ skill.name }}</span>
+
+    <span class="skill-level-text">
+      {{ 'SKILLS.LEVELS.' + (skill.levelKey || skillLevelKey) | translate }}
+      <span class="percentage">({{ skill.level }}%)</span>
+    </span>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-fill" [style.width.%]="skill.level"></div>
+  </div>
+</div>

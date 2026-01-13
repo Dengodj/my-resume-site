@@ -1,0 +1,75 @@
+<div class="cv-wrapper">
+  <div class="no-print controls">
+    <button (click)="downloadPDF()" class="print-button">
+      <lucide-icon name="download"></lucide-icon>
+      {{ 'CV.SAVE_PDF' | translate }}
+    </button>
+    <p class="print-hint">{{ 'CV.PRINT_HINT' | translate }}</p>
+  </div>
+
+  <main class="cv-page">
+    <header class="cv-header">
+      <div class="title-block">
+        <h1>{{ myInfo.nameKey | translate }}</h1>
+        <p class="subtitle">{{ myInfo.roleKey | translate }}</p>
+      </div>
+      <div class="contact-block">
+        <p><strong>Email:</strong> {{ myInfo.email }}</p>
+        <p><strong>Location:</strong> {{ myInfo.location }}</p>
+        <p><strong>GitHub:</strong> {{ myInfo.github }}</p>
+      </div>
+    </header>
+
+    <div class="cv-body">
+      <section class="cv-section">
+        <h3 class="section-title">{{ 'SKILLS.TITLE' | translate }}</h3>
+        <div class="skills-container">
+          <div *ngFor="let category of hardSkills" class="skill-group">
+            <h4 class="category-name">{{ category.titleKey | translate }}</h4>
+            <div class="skills-list">
+              <span *ngFor="let skill of category.skills" class="skill-tag">
+                {{ skill.name }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="two-columns">
+        <section class="cv-section">
+          <h3 class="section-title">{{ 'SKILLS.CATEGORIES.SOFT' | translate }}</h3>
+          <ul class="simple-list">
+            <li *ngFor="let soft of softSkills">
+              {{ soft.nameKey | translate }}
+            </li>
+          </ul>
+        </section>
+
+        <section class="cv-section">
+          <h3 class="section-title">{{ 'SKILLS.CATEGORIES.LANGUAGES' | translate }}</h3>
+          <ul class="simple-list">
+            <li *ngFor="let lang of languages">
+              <strong>{{ lang.nameKey | translate }}:</strong>
+              {{ lang.levelKey | translate }}
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="cv-section">
+        <h3 class="section-title">{{ 'CV.SECTIONS.EXPERIENCE' | translate }}</h3>
+        <div class="experience-item">
+          <p class="exp-date">2024 - Present</p>
+          <p class="exp-desc">
+            <strong>Frontend Development (Self-Employed / Projects)</strong><br />
+            {{ 'HERO.DESCRIPTION' | translate }}
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <footer class="cv-footer">
+      <p>{{ 'CV.FOOTER_TEXT' | translate }}</p>
+    </footer>
+  </main>
+</div>

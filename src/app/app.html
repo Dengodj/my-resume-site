@@ -1,0 +1,20 @@
+<ngx-particles
+  id="tsparticles"
+  [options]="particlesOptions"
+  [particlesInit]="particlesInit"
+></ngx-particles>
+
+<div class="app-container">
+  <app-header></app-header>
+
+  <main class="page-content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <app-footer></app-footer>
+
+  <a href="#top" class="back-to-top" appScrollToTop aria-label="Back to top!">
+    <span class="back-to-top-icon">↑</span>
+    <span class="back-to-top-tooltip">{{ 'FOOTER.BACK_TO_TOP' | translate }}</span>
+  </a>
+</div>

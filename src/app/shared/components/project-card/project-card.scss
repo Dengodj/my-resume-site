@@ -1,0 +1,301 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+:host {
+  display: block;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.project-card-inner {
+  position: relative;
+  background-color: rgba(34, 63, 77, 0.603);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(v.$color-logo, 0.15);
+  border-radius: 6px;
+  padding: clamp(2rem, 5vw, 3.5rem);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-8px);
+    background: rgba(34, 63, 77, 0.685);
+    border-color: v.$accent;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    .status-dot {
+      transform: scale(1.2);
+    }
+  }
+
+  // STATUS BADGE
+  .project-status {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 2;
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .status-text {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    // STATUS COLORS
+    &[data-status='active'] {
+      color: #4ade80;
+      .status-dot {
+        background-color: #4ade80;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: inherit;
+          animation: pulse-dot 2s infinite;
+        }
+      }
+    }
+    &[data-status='completed'] {
+      color: #60a5fa;
+      .status-dot {
+        background-color: #60a5fa;
+      }
+    }
+    &[data-status='development'] {
+      color: #fbbf24;
+      .status-dot {
+        background-color: #fbbf24;
+      }
+    }
+  }
+
+  // INFO SECTION
+  .main-info {
+    flex-grow: 1;
+
+    h3 {
+      color: v.$color-logo;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      padding-right: 9rem;
+      line-height: 1.2;
+    }
+
+    .p-desc {
+      color: v.$color-logo;
+      font-size: 2.1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+
+      @include m.respond-to(mobile) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  // TECH STACK
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+
+    .tech-tag {
+      padding: 0.5rem 1.2rem;
+      background: rgba(34, 63, 77, 0.685);
+      border: 1px solid rgba(v.$color-logo, 0.2);
+      color: v.$color-logo;
+      border-radius: 6px;
+      font-size: 1.85rem;
+      font-weight: 200;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgba(34, 63, 77, 0.4);
+        border-color: v.$color-logo;
+      }
+
+      @include m.respond-to(mobile) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  // --- GITHUB HUB ---
+  .github-hub {
+    margin-top: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid v.$accent;
+
+    .hub-title {
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: v.$color-logo;
+      margin-bottom: 1.5rem;
+      display: block;
+      font-weight: 200;
+
+      @include m.respond-to(mobile) {
+        text-align: center;
+        font-size: 1.8rem;
+      }
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .hub-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem;
+      background: rgba(34, 63, 77, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.384);
+      border-radius: 12px;
+      color: v.$color-logo;
+      text-decoration: none;
+      font-size: 1.55rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(34, 63, 77, 0.685);
+        border-color: v.$color-logo;
+        color: v.$color-logo;
+        transform: translateX(8px);
+      }
+
+      .icon-folder {
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover .icon-folder {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  // DEMO BUTTON
+  .actions {
+    margin-top: auto;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+
+    .btn-demo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 3.5rem;
+      background: v.$color-logo;
+      color: v.$text-color2;
+      border: 1px solid v.$accent;
+      border-radius: 6px;
+      font-weight: 900;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(v.$color-logo, 0.4);
+        filter: brightness(1.1);
+      }
+    }
+
+    @include m.respond-to(mobile) {
+      justify-content: center;
+
+      .btn-demo {
+        width: auto;
+        min-width: 70px;
+        padding: 1.2rem 0.25rem;
+        font-size: 0.95rem;
+        color: v.$accent;
+        border-radius: 50px;
+        letter-spacing: 1px;
+
+        animation: mobile-pulse 2s infinite;
+
+        &:active {
+          animation: none;
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}
+
+// Animation for status dot pulse
+@keyframes pulse-dot {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+// Mobile
+@include m.respond-to(mobile) {
+  .project-card-inner {
+    padding: 2rem;
+
+    .project-status {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin-bottom: 1.5rem;
+      align-self: flex-start;
+    }
+
+    .main-info h3 {
+      padding-right: 0;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@keyframes mobile-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(v.$color-logo, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(v.$color-logo, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(v.$color-logo, 0);
+  }
+}

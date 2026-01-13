@@ -1,0 +1,181 @@
+{
+  "HEADER": {
+    "LOGO_TEXT": "DGoida"
+  },
+  "NAV": {
+    "ABOUT": "Обо мне",
+    "SKILLS": "Навыки",
+    "PROJECTS": "Проекты",
+    "CONTACTS": "Контакты"
+  },
+  "THEME": {
+    "LIGHT": "Светлая тема",
+    "DARK": "Темная тема",
+    "SWITCH_LIGHT": "Перейти на светлую тему",
+    "SWITCH_DARK": "Перейти на темную тему"
+  },
+  "HERO": {
+    "GREETING": "Привет, я",
+    "NAME": "Денис Гойда",
+    "TITLE": "Frontend-разработчик & UI/UX дизайнер",
+    "DESCRIPTION": "Проектирую интерфейсы в Figma и реализую их в масштабируемых архитектурах на Angular (CRM, высоконагруженные системы). Профессионально использую RxJS, NgRx, Gulp. Умею находить баланс между эстетикой дизайна и производительностью кода.",
+    "VIEW_PROJECTS": "Посмотреть проекты",
+    "DOWNLOAD_CV": "Скачать CV"
+  },
+  "LANG": {
+    "EN": "ENG",
+    "RU": "РУС",
+    "UK": "УКР"
+  },
+  "SKILLS": {
+    "TITLE": "Мои Навыки и Компетенции",
+    "SUBTITLE": "Прогресс-бары отражают мой уровень владения ключевыми инструментами и технологиями.",
+    "CATEGORIES": {
+      "FRONTEND": "Frontend Разработка",
+      "TOOLS": "Инструменты и Инфраструктура",
+      "SOFT": "Гибкие навыки",
+      "LANGUAGES": "Языки",
+      "LEARNING": "Текущее обучение и интересы"
+    },
+    "LEVELS": {
+      "EXPERT": "Эксперт",
+      "ADVANCED": "Продвинутый",
+      "INTERMEDIATE": "Опытный",
+      "UPPER_INTERMEDIATE": "Выше среднего",
+      "NATIVE": "Родной"
+    },
+    "SOFT": {
+      "TEAMWORK": "Командная работа",
+      "PROBLEM_SOLVING": "Решение задач",
+      "MENTORING": "Менторство",
+      "ADAPTABILITY": "Адаптивность"
+    },
+    "LANG": {
+      "EN": "Английский",
+      "UA": "Украинский",
+      "RU": "Русский"
+    },
+    "STATUS": {
+      "LEARNING": "В процессе",
+      "PLANNING": "Запланировано",
+      "INTEREST": "Изучение"
+    }
+  },
+  "ABOUT": {
+    "SUBTITLE": "Frontend-разработчик | UI/UX-дизайнер. Моя страсть — создавать удобные, быстрые и визуально привлекательные веб-приложения, уделяя особое внимание архитектуре и пользовательскому опыту.",
+    "VISION_FULLSTACK_TITLE": "Full Stack & AI",
+    "VISION_FULLSTACK_DESC": "Двигаюсь к уровню Full Stack, осваивая C#, C++ и Python для создания мощных решений.",
+    "VISION_AI_TITLE": "AI Integration",
+    "VISION_AI_DESC": "Моё видение будущего веба: разработка приложений с интегрированным искусственным интеллектом.",
+    "PHILOSOPHY_TITLE": "Digital Philosophy ⚡︎ Интеллект и Эстетика",
+    "PHILOSOPHY_ENG_TITLE": "Инженерный подход:",
+    "PHILOSOPHY_ENG_DESC": "Чистый код на TypeScript и Angular для стабильности.",
+    "PHILOSOPHY_DESIGN_TITLE": "Дизайнерский подход:",
+    "PHILOSOPHY_DESIGN_DESC": "Доступность и интуитивные интерфейсы.",
+    "TIMELINE_TITLE": "Опыт и Образование",
+    "UNI_TITLE": "Европейский Университет",
+    "UNI_DESC": "Студент факультета компьютерных наук. Системная инженерия.",
+    "EXP_SENIOR_TITLE": "Middle Frontend Developer (Angular)",
+    "EXP_SENIOR_DESC": "Архитектура на Standalone Components и RxJS.",
+    "CERT_LABEL": "Сертификат",
+    "CERT_TITLE": "Certified Frontend Developer",
+    "CERT_DESC": "Уверенное владение современным веб-стеком.",
+    "CERT_STATUS": "ПОДТВЕРЖДЁННЫЙ PDF",
+    "CERT_VIEW": "Открыть документ",
+    "CERT_LABEL_TECH": "Frontend Developer Credential"
+  },
+  "PROJECTS": {
+    "TITLE": "Мои Проекты",
+    "SUBTITLE": "Примеры реализованных решений и экспериментов",
+    "VIEW_CODE": "Код",
+    "VIEW_DEMO": "Демо",
+    "STATUS": {
+      "active": "Активен",
+      "completed": "Завершен",
+      "development": "В разработке"
+    },
+    "CAPABILITIES_TITLE": "Экспертиза в сложных решениях",
+    "CAPABILITIES": {
+      "PERFORMANCE": {
+        "TITLE": "Высокая скорость",
+        "DESC": "Оптимизированные Angular приложения с lazy loading и Signals для максимальной производительности."
+      },
+      "RESPONSIVE": {
+        "TITLE": "Адаптивность",
+        "DESC": "Пиксельно-точная верстка для всех устройств: от мобильных телефонов до ультра-широких мониторов."
+      },
+      "UIUX": {
+        "TITLE": "Чистый UI/UX",
+        "DESC": "Современный дизайн с плавными анимациями и интуитивной навигацией для лучшего опыта."
+      }
+    },
+    "CTA": {
+      "TITLE": "Готовы воплотить ваши идеи в жизнь?",
+      "SUBTITLE": "Я всегда открыт к обсуждению новых проектов и креативных возможностей.",
+      "BUTTON": "Связаться со мной"
+    },
+    "ITEMS": {
+      "MAIN_PORTFOLIO": {
+        "id": 1,
+        "status": "active",
+        "description": "Полнофункциональное SPA на Angular с поддержкой мультиязычности и динамической подгрузкой проектов.",
+        "technologies": ["Angular", "TypeScript", "SCSS", "ngx-translate"],
+        "imageUrl": "assets/images/portfolio.jpg",
+        "githubUrl": "https://github.com/dengodj/angular-portfolio-project2",
+        "liveUrl": "https://dengodj.github.io/angular-portfolio-project2/",
+        "extraLinks": [
+          { "label": "Урок 5 (Landing)", "url": "https://dengodj.github.io/lesson5/" },
+          { "label": "Урок 6 (Layout)", "url": "https://dengodj.github.io/lesson6/" },
+          { "label": "Урок 12 (JS Logic)", "url": "https://dengodj.github.io/lesson12/" }
+        ]
+      }
+    }
+  },
+  "CONTACTS": {
+    "TITLE": "Свяжитесь со мной",
+    "SUBTITLE": "Инициализация нового соединения...",
+    "DESCRIPTION": "Стек готов к масштабированию ваших идей. Отправьте запрос (POST), и я обработаю входящие данные, чтобы превратить их в высокопроизводительный интерфейс. Текущий статус: Доступен для новых вызовов.",
+    "CV_BUTTON": "Скачать CV",
+    "FORM": {
+      "NAME": "Ваше Имя",
+      "MESSAGE": "Сообщение",
+      "PLACEHOLDER": "Расскажите о вашем проекте...",
+      "SUBMIT": "Отправить сообщение",
+      "SENDING": "Отправка..."
+    },
+    "SOCIAL_TITLE": "Или найдите меня здесь:",
+    "ERRORS": {
+      "NAME_REQ": "Имя обязательно для заполнения.",
+      "EMAIL_REQ": "Email обязателен.",
+      "EMAIL_INVALID": "Введите корректный email адрес.",
+      "MSG_REQ": "Сообщение обязательно.",
+      "MSG_MIN": "Сообщение должно быть не менее 20 символов."
+    },
+    "SUCCESS": {
+      "SENT": "Отправлено! Я скоро свяжусь с вами по адресу",
+      "EMAIL": "itdev.step@gmail.com"
+    }
+  },
+  "CV": {
+    "SAVE_PDF": "Сохранить как PDF",
+    "PRINT_HINT": "Совет: Выберите «Сохранить как PDF» в списке назначения для загрузки.",
+    "FOOTER_TEXT": "Этот документ был автоматически сгенерирован из моего цифрового портфолио.",
+    "PRINT_ACTION": "Печать / Сохранить PDF",
+    "SECTIONS": {
+      "SUMMARY": "Профессиональное резюме",
+      "EXPERIENCE": "Опыт и проекты",
+      "CONTACT": "Контактные данные"
+    }
+  },
+  "ERROR": {
+    "TITLE": "Упс! Страница не найдена",
+    "TEXT": "Кажется, вы заблудились. Запрашиваемая страница не существует.",
+    "SECONDARY_TEXT": "Возможно, она путешествует в параллельной вселенной...",
+    "BACK_HOME": "Вернуться на Главную"
+  },
+  "FOOTER": {
+    "RIGHTS": "Все права защищены",
+    "BUILT_WITH": "Сайт разработан на",
+    "BACK_TO_TOP": "Наверх!"
+  }
+}
