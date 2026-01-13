@@ -1,0 +1,182 @@
+{
+  "HEADER": {
+    "LOGO_TEXT": "DGoida"
+  },
+  "NAV": {
+    "ABOUT": "About",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "CONTACTS": "Contacts"
+  },
+  "THEME": {
+    "LIGHT": "Light Mode",
+    "DARK": "Dark Mode",
+    "SWITCH_LIGHT": "Switch to light theme",
+    "SWITCH_DARK": "Switch to dark theme"
+  },
+  "HERO": {
+    "GREETING": "Hi, I'm",
+    "NAME": "Denys Goida",
+    "TITLE": "Frontend Developer & UI/UX Designer",
+    "DESCRIPTION": "I design interfaces in Figma and implement them in scalable Angular architectures (CRM, high-load systems). Professionally using RxJS, NgRx, Gulp. I know how to find the balance between design aesthetics and code performance.",
+    "VIEW_PROJECTS": "View Projects",
+    "DOWNLOAD_CV": "Download CV"
+  },
+  "LANG": {
+    "EN": "ENG",
+    "RU": "RUS",
+    "UK": "UKR"
+  },
+  "SKILLS": {
+    "TITLE": "My Skills & Competencies",
+    "SUBTITLE": "Progress bars reflect my proficiency in key tools and technologies.",
+    "CATEGORIES": {
+      "FRONTEND": "Frontend Development",
+      "TOOLS": "Tools & Infrastructure",
+      "SOFT": "Soft Skills",
+      "LANGUAGES": "Languages",
+      "LEARNING": "Current Learning & Interests"
+    },
+    "LEVELS": {
+      "EXPERT": "Expert",
+      "ADVANCED": "Advanced",
+      "INTERMEDIATE": "Intermediate",
+      "UPPER_INTERMEDIATE": "Upper-Intermediate",
+      "NATIVE": "Native"
+    },
+    "SOFT": {
+      "TEAMWORK": "Teamwork",
+      "PROBLEM_SOLVING": "Problem Solving",
+      "MENTORING": "Mentoring",
+      "ADAPTABILITY": "Adaptability"
+    },
+    "LANG": {
+      "EN": "English",
+      "UA": "Ukrainian",
+      "RU": "Russian"
+    },
+    "STATUS": {
+      "LEARNING": "In Progress",
+      "PLANNING": "Planned",
+      "INTEREST": "Exploring"
+    }
+  },
+  "ABOUT": {
+    "SUBTITLE": "Frontend Developer | UI/UX Designer. My passion is creating intuitive, fast, and visually stunning web applications, paying special attention to architecture and user experience.",
+    "VISION_FULLSTACK_TITLE": "Full Stack & AI",
+    "VISION_FULLSTACK_DESC": "Evolving towards a Full Stack level, mastering C#, C++, and Python to create powerful solutions.",
+    "VISION_AI_TITLE": "AI Integration",
+    "VISION_AI_DESC": "My vision for the future of web: developing applications with integrated Artificial Intelligence.",
+    "PHILOSOPHY_TITLE": "Digital Philosophy ⚡︎ Intelligence & Aesthetics",
+    "PHILOSOPHY_ENG_TITLE": "Engineering Approach:",
+    "PHILOSOPHY_ENG_DESC": "Clean code with TypeScript and Angular for long-term stability.",
+    "PHILOSOPHY_DESIGN_TITLE": "Design Approach:",
+    "PHILOSOPHY_DESIGN_DESC": "Accessibility and intuitive interfaces.",
+    "TIMELINE_TITLE": "Experience & Education",
+    "UNI_TITLE": "European University",
+    "UNI_DESC": "Computer Science student. System Engineering specialization.",
+    "EXP_SENIOR_TITLE": "Middle Frontend Developer (Angular)",
+    "EXP_SENIOR_DESC": "Architecture based on Standalone Components and RxJS.",
+    "CERT_LABEL": "Certificate",
+    "CERT_TITLE": "Certified Frontend Developer",
+    "CERT_DESC": "Proficient mastery of the modern web stack.",
+    "CERT_STATUS": "VERIFIED PDF",
+    "CERT_VIEW": "Open Document",
+    "CERT_LABEL_TECH": "Frontend Developer Credential"
+  },
+  "PROJECTS": {
+    "TITLE": "My Projects",
+    "SUBTITLE": "Selected solutions and experimental works",
+    "VIEW_CODE": "Code",
+    "VIEW_DEMO": "Live Demo",
+    "STATUS": {
+      "active": "Active",
+      "completed": "Completed",
+      "development": "In Progress"
+    },
+    "CAPABILITIES_TITLE": "Expertise in Complex Solutions",
+    "CAPABILITIES": {
+      "PERFORMANCE": {
+        "TITLE": "High Performance",
+        "DESC": "Optimized Angular applications with lazy loading and Signals for maximum speed."
+      },
+      "RESPONSIVE": {
+        "TITLE": "Full Responsive",
+        "DESC": "Pixel-perfect layouts for all devices from mobile to ultra-wide screens."
+      },
+      "UIUX": {
+        "TITLE": "Clean UI/UX",
+        "DESC": "Modern design with smooth animations and intuitive navigation for best user experience."
+      }
+    },
+    "CTA": {
+      "TITLE": "Ready to bring your ideas to life?",
+      "SUBTITLE": "I'm always open to discussing new projects and creative opportunities.",
+      "BUTTON": "Get in Touch"
+    },
+    "ITEMS": {
+      "MAIN_PORTFOLIO": {
+        "id": 1,
+        "status": "active",
+        "description": "Fully functional Angular SPA with multi-language support and dynamic project loading.",
+        "technologies": ["Angular", "TypeScript", "SCSS", "ngx-translate"],
+        "imageUrl": "assets/images/portfolio.jpg",
+        "githubUrl": "https://github.com/dengodj/angular-portfolio-project2",
+        "liveUrl": "https://dengodj.github.io/angular-portfolio-project2/",
+        "extraLinks": [
+          { "label": "Lesson 5 (Landing)", "url": "https://dengodj.github.io/lesson5/" },
+          { "label": "Lesson 6 (Layout)", "url": "https://dengodj.github.io/lesson6/" },
+          { "label": "Lesson 12 (JS Logic)", "url": "https://dengodj.github.io/lesson12/" }
+        ]
+      }
+    }
+  },
+  "CONTACTS": {
+    "TITLE": "Contact Me",
+    "SUBTITLE": "Initializing new connection...",
+    "DESCRIPTION": "The stack is ready to scale your ideas. Send a POST request, and I'll process the incoming data to transform it into a high-performance interface. Current status: Available for new calls.",
+    "CV_BUTTON": "Download CV",
+    "FORM": {
+      "NAME": "Your Name",
+      "MESSAGE": "Message",
+      "PLACEHOLDER": "Tell me about your project...",
+      "SUBMIT": "Send Message",
+      "SENDING": "Sending"
+    },
+    "SOCIAL_TITLE": "Or find me here:",
+    "ERRORS": {
+      "NAME_REQ": "Name is required.",
+      "EMAIL_REQ": "Email is required.",
+      "EMAIL_INVALID": "Please enter a valid email address.",
+      "MSG_REQ": "Message is required.",
+      "MSG_MIN": "Message must be at least 20 characters.",
+      "MSG_MIN_VAL": "20"
+    },
+    "SUCCESS": {
+      "SENT": "Sent! I will contact you soon at",
+      "EMAIL": "itdev.step@gmail.com"
+    }
+  },
+  "CV": {
+    "SAVE_PDF": "Save as PDF",
+    "PRINT_HINT": "Tip: Select 'Save as PDF' in the destination list to download.",
+    "FOOTER_TEXT": "This document was generated automatically from my digital portfolio.",
+    "PRINT_ACTION": "Print / Save PDF",
+    "SECTIONS": {
+      "SUMMARY": "Professional Summary",
+      "EXPERIENCE": "Experience & Projects",
+      "CONTACT": "Contact Details"
+    }
+  },
+  "ERROR": {
+    "TITLE": "Oops! Page not found",
+    "TEXT": "Looks like you're lost. The page you requested doesn't exist.",
+    "SECONDARY_TEXT": "Maybe it's traveling in a parallel universe...",
+    "BACK_HOME": "Back to Home"
+  },
+  "FOOTER": {
+    "RIGHTS": "All rights reserved",
+    "BUILT_WITH": "Built with",
+    "BACK_TO_TOP": "Up!"
+  }
+}

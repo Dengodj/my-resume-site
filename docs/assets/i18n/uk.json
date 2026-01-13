@@ -1,0 +1,181 @@
+{
+  "HEADER": {
+    "LOGO_TEXT": "DGoida"
+  },
+  "NAV": {
+    "ABOUT": "Про мене",
+    "SKILLS": "Навички",
+    "PROJECTS": "Проєкти",
+    "CONTACTS": "Контакти"
+  },
+  "THEME": {
+    "LIGHT": "Світла тема",
+    "DARK": "Темна тема",
+    "SWITCH_LIGHT": "Перейти на світлу тему",
+    "SWITCH_DARK": "Перейти на темну тему"
+  },
+  "HERO": {
+    "GREETING": "Привіт, я",
+    "NAME": "Денис Гойда",
+    "TITLE": "Frontend-розробник & UI/UX дизайнер",
+    "DESCRIPTION": "Проектую інтерфейси в Figma та реалізую їх у масштабованих архітектурах на Angular (CRM, високонавантажені системи). Професійно використовую RxJS, NgRx, Gulp. Знаю як знайти баланс між естетикою дизайну та продуктивністю коду.",
+    "VIEW_PROJECTS": "Переглянути проєкти",
+    "DOWNLOAD_CV": "Завантажити CV"
+  },
+  "LANG": {
+    "EN": "ENG",
+    "RU": "РУС",
+    "UK": "УКР"
+  },
+  "SKILLS": {
+    "TITLE": "Мої Навички та Компетенції",
+    "SUBTITLE": "Прогрес-бари відображають мій рівень володіння ключовими інструментами та технологіями.",
+    "CATEGORIES": {
+      "FRONTEND": "Frontend Розробка",
+      "TOOLS": "Інструменти та Інфраструктура",
+      "SOFT": "Гнучкі навички",
+      "LANGUAGES": "Мови",
+      "LEARNING": "Поточне навчання та інтереси"
+    },
+    "LEVELS": {
+      "EXPERT": "Eксперт",
+      "ADVANCED": "Просунутий",
+      "INTERMEDIATE": "Досвідчений",
+      "UPPER_INTERMEDIATE": "Вище середнього",
+      "NATIVE": "Рідний"
+    },
+    "SOFT": {
+      "TEAMWORK": "Командна робота",
+      "PROBLEM_SOLVING": "Вирішення задач",
+      "MENTORING": "Менторство",
+      "ADAPTABILITY": "Адаптивність"
+    },
+    "LANG": {
+      "EN": "Англійська",
+      "UA": "Українська",
+      "RU": "Російська"
+    },
+    "STATUS": {
+      "LEARNING": "У процесі",
+      "PLANNING": "Заплановано",
+      "INTEREST": "Дослідження"
+    }
+  },
+  "ABOUT": {
+    "SUBTITLE": "Frontend-розробник | UI/UX-дизайнер. Моя пристрасть — створювати зручні, швидкі та візуально привабливі веб-додатки, приділяючи особливу увагу архітектурі та користувацькому досвіду.",
+    "VISION_FULLSTACK_TITLE": "Full Stack & AI",
+    "VISION_FULLSTACK_DESC": "Рухаюсь до рівня Full Stack, опановуючи C#, C++ та Python для створення потужних рішень.",
+    "VISION_AI_TITLE": "AI Integration",
+    "VISION_AI_DESC": "Моє бачення майбутнього вебу: розробка додатків з інтегрованим штучним інтелектом.",
+    "PHILOSOPHY_TITLE": "Digital Philosophy ⚡︎ Інтелект та Естетика",
+    "PHILOSOPHY_ENG_TITLE": "Інженерний підхід:",
+    "PHILOSOPHY_ENG_DESC": "Чистий код на TypeScript та Angular для стабільності.",
+    "PHILOSOPHY_DESIGN_TITLE": "Дизайнерський підхід:",
+    "PHILOSOPHY_DESIGN_DESC": "Доступність та інтуїтивні інтерфейси.",
+    "TIMELINE_TITLE": "Досвід та Освіта",
+    "UNI_TITLE": "Європейський Університет",
+    "UNI_DESC": "Студент факультету комп'ютерних наук. Системна інженерія.",
+    "EXP_SENIOR_TITLE": "Middle Frontend Developer (Angular)",
+    "EXP_SENIOR_DESC": "Архітектура на Standalone Components та RxJS.",
+    "CERT_LABEL": "Сертифікат",
+    "CERT_TITLE": "Certified Frontend Developer",
+    "CERT_DESC": "Впевнене володіння сучасним веб-стеком.",
+    "CERT_STATUS": "ПІДТВЕРДЖЕНИЙ PDF",
+    "CERT_VIEW": "Відкрити документ",
+    "CERT_LABEL_TECH": "Frontend Developer Credential"
+  },
+  "PROJECTS": {
+    "TITLE": "Мої Проєкти",
+    "SUBTITLE": "Приклади реалізованих рішень та експериментів",
+    "VIEW_CODE": "Код",
+    "VIEW_DEMO": "Демо",
+    "STATUS": {
+      "active": "Активний",
+      "completed": "Завершений",
+      "development": "У розробці"
+    },
+    "CAPABILITIES_TITLE": "Експертиза у складних рішеннях",
+    "CAPABILITIES": {
+      "PERFORMANCE": {
+        "TITLE": "Висока продуктивність",
+        "DESC": "Оптимізовані Angular додатки з використанням lazy loading та Signals для максимальної швидкості."
+      },
+      "RESPONSIVE": {
+        "TITLE": "Повна адаптивність",
+        "DESC": "Піксельно-точна верстка для всіх пристроїв: від мобільних до ультрашироких моніторів."
+      },
+      "UIUX": {
+        "TITLE": "Чистий UI/UX",
+        "DESC": "Сучасний дизайн із плавною анімацією та інтуїтивною навігацією для найкращого досвіду."
+      }
+    },
+    "CTA": {
+      "TITLE": "Готові втілити ваші ідеї в життя?",
+      "SUBTITLE": "Я завжди відкритий до обговорення нових проєктів та креативних можливостей.",
+      "BUTTON": "Зв'язатися зі мною"
+    },
+    "ITEMS": {
+      "MAIN_PORTFOLIO": {
+        "id": 1,
+        "status": "active",
+        "description": "Повнофункціональний SPA на Angular з підтримкою багатомовності та динамічним завантаженням проєктів.",
+        "technologies": ["Angular", "TypeScript", "SCSS", "ngx-translate"],
+        "imageUrl": "assets/images/portfolio.jpg",
+        "githubUrl": "https://github.com/dengodj/angular-portfolio-project2",
+        "liveUrl": "https://dengodj.github.io/angular-portfolio-project2/",
+        "extraLinks": [
+          { "label": "Урок 5 (Landing)", "url": "https://dengodj.github.io/lesson5/" },
+          { "label": "Урок 6 (Layout)", "url": "https://dengodj.github.io/lesson6/" },
+          { "label": "Урок 12 (JS Logic)", "url": "https://dengodj.github.io/lesson12/" }
+        ]
+      }
+    }
+  },
+  "CONTACTS": {
+    "TITLE": "Зв'яжіться зі мною",
+    "SUBTITLE": "Ініціалізація нового з'єднання...",
+    "DESCRIPTION": "Стек готовий до масштабування ваших ідей. Надішліть запит (POST), і я оброблю вхідні дані, щоб перетворити їх на високопродуктивний інтерфейс. Поточний статус: Доступний для нових викликів.",
+    "CV_BUTTON": "Завантажити CV",
+    "FORM": {
+      "NAME": "Ваше Ім'я",
+      "MESSAGE": "Повідомлення",
+      "PLACEHOLDER": "Розкажіть про ваш проєкт...",
+      "SUBMIT": "Надіслати повідомлення",
+      "SENDING": "Надсилання..."
+    },
+    "SOCIAL_TITLE": "Або знайдіть мене тут:",
+    "ERRORS": {
+      "NAME_REQ": "Ім'я обов'язкове для заповнення.",
+      "EMAIL_REQ": "Email обов'язковий.",
+      "EMAIL_INVALID": "Введіть коректну email адресу.",
+      "MSG_REQ": "Повідомлення обов'язкове.",
+      "MSG_MIN": "Повідомлення має містити не менше 20 символів."
+    },
+    "SUCCESS": {
+      "SENT": "Надіслано! Я скоро зв'яжуся з вами за адресою",
+      "EMAIL": "itdev.step@gmail.com"
+    }
+  },
+  "CV": {
+    "SAVE_PDF": "Зберегти як PDF",
+    "PRINT_HINT": "Підказка: Виберіть «Зберегти як PDF» у списку місць призначення для завантаження.",
+    "FOOTER_TEXT": "Цей документ було автоматично створено з мого цифрового портфоліо.",
+    "PRINT_ACTION": "Друкувати / Зберегти PDF",
+    "SECTIONS": {
+      "SUMMARY": "Професійне резюме",
+      "EXPERIENCE": "Досвід і проекти",
+      "CONTACT": "Контактні дані"
+    }
+  },
+  "ERROR": {
+    "TITLE": "Ой! Сторінка не знайдена",
+    "TEXT": "Схоже, ви заблукали. Запитана сторінка не існує.",
+    "SECONDARY_TEXT": "Можливо, вона подорожує в паралельному всесвіті...",
+    "BACK_HOME": "Повернутися на Головну"
+  },
+  "FOOTER": {
+    "RIGHTS": "Усі права захищені",
+    "BUILT_WITH": "Сайт розроблено на",
+    "BACK_TO_TOP": "Вгору!"
+  }
+}
