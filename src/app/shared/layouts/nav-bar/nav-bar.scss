@@ -8,6 +8,10 @@
   padding: 0;
   gap: 3.5rem;
   flex-direction: row;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    gap: 2rem;
+  }
 }
 
 .nav-link {
@@ -20,6 +24,10 @@
   padding-bottom: 0.5rem;
   transition: color 0.3s ease, transform 0.3s ease;
   will-change: transform;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 1.6rem;
+  }
 
   &::after {
     content: '';
@@ -60,6 +68,11 @@
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem 2rem;
       }
+
+      // iPad
+      @media screen and (min-width: 768px) {
+        gap: 4.5rem;
+      }
     }
 
     .nav-link {
@@ -75,6 +88,10 @@
       @media screen and (orientation: landscape) and (max-height: 500px) {
         font-size: 1.6rem;
         padding: 0.4rem 0;
+      }
+
+      @media screen and (min-width: 768px) {
+        font-size: 2.8rem;
       }
     }
   }
