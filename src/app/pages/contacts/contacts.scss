@@ -48,6 +48,12 @@
     padding: 2rem 0 4rem;
     align-items: flex-start;
   }
+
+  // Tablet vertical adaptation
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding-top: 6rem;
+    align-items: flex-start;
+  }
 }
 
 .contact-container {
@@ -178,6 +184,11 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  // Landscape tablet
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: 1.6fr 1fr;
+  }
 }
 
 // Card styles
@@ -265,6 +276,10 @@
       textarea {
         min-height: 250px;
         resize: none;
+
+        @media screen and (max-height: 600px) {
+          min-height: 120px;
+        }
       }
     }
 
@@ -315,7 +330,7 @@
     padding: 1.2rem 2.5rem;
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     background: transparent;
 
     @include m.respond-to(mobile) {
@@ -417,6 +432,11 @@
       flex-direction: column;
       text-align: center;
     }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
   }
 
   h3 {
@@ -430,6 +450,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    width: 100%;
   }
 
   .social-card {
@@ -472,7 +493,7 @@
   }
 }
 
-// Tech Decoration)
+// Tech Decoration
 .social-image {
   flex: 0 0 150px;
   display: flex;
@@ -482,6 +503,10 @@
   @include m.respond-to(mobile) {
     margin: 1rem 0;
     transform: scale(0.9);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    display: none;
   }
 
   .tech-decoration {
@@ -512,13 +537,11 @@
         border: 2px solid v.$accent;
         border-radius: 50%;
         display: none;
-
         @include m.respond-to(mobile) {
           display: block;
         }
       }
 
-      // Core 1
       &::before {
         width: 30px;
         height: 30px;
@@ -527,7 +550,6 @@
         animation: spin-core 1.5s linear infinite;
       }
 
-      // Core 2
       &::after {
         width: 50px;
         height: 50px;
@@ -604,17 +626,6 @@
   }
 }
 
-@keyframes pulse-ring {
-  0% {
-    transform: translate(-50%, -50%) scale(0.5);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1.5);
-    opacity: 0;
-  }
-}
-
 // CV & Tooltip
 .tooltip {
   position: absolute;
@@ -658,7 +669,6 @@
     }
   }
 
-  // CV Button
   .cv-download-btn {
     display: flex;
     align-items: center;
@@ -670,16 +680,9 @@
     color: v.$accent;
     text-decoration: none;
     font-size: 1.8rem;
-
     width: fit-content;
     min-width: 200px;
     margin: 0 auto;
-
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    -webkit-font-smoothing: antialiased;
-    will-change: box-shadow;
-
     animation: pulse-orange 3s infinite ease-in-out;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
@@ -701,12 +704,8 @@
       background: rgba(v.$accent, 0.15);
       border-color: v.$color-logo;
       color: v.$color-logo;
-      transform: translateY(-3px) scale(1.05) translateZ(0);
+      transform: translateY(-3px) scale(1.05);
       box-shadow: 0 10px 20px rgba(v.$accent, 0.2);
-    }
-
-    &:active {
-      transform: translateY(-1px) scale(0.98) translateZ(0);
     }
   }
 }
@@ -729,14 +728,17 @@
     .section-subtitle {
       display: none;
     }
+  }
 
-    .contact-content {
-      gap: 1.5rem;
-    }
+  .contact-content {
+    gap: 1.5rem;
+  }
+  .shadow-glass {
+    padding: 1.5rem;
+  }
 
-    .shadow-glass {
-      padding: 1.5rem;
-    }
+  .contact-form .form-group .input-wrapper textarea {
+    min-height: 120px;
   }
 }
 

@@ -21,6 +21,12 @@
     min-height: auto;
     padding: 1.5rem 0;
   }
+
+  // Tablet vertical adaptation
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    min-height: 50vh;
+    padding: 4rem 0;
+  }
 }
 
 .hero-content {
@@ -42,6 +48,10 @@
     text-align: left;
     gap: 2rem;
     align-items: flex-start;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    gap: 5rem;
   }
 }
 
@@ -82,6 +92,11 @@
     justify-content: center;
   }
 
+  // Tablets ( avatar section)
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    flex: 0 0 320px;
+  }
+
   .hero-avatar {
     width: 100%;
     max-width: 400px;
@@ -96,6 +111,10 @@
 
     @media (orientation: landscape) and (max-height: 500px) {
       max-width: 160px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      max-width: 320px;
     }
   }
 }
@@ -142,6 +161,16 @@
       margin-bottom: 0.5rem;
     }
   }
+
+  // Tablets
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .hero-greeting {
+      font-size: 2.8rem;
+    }
+    .hero-title {
+      font-size: 2.2rem;
+    }
+  }
 }
 
 .hero-description {
@@ -172,6 +201,11 @@
     line-height: 1.4;
     text-align: left;
     width: 100%;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 1.7rem;
+    padding: 2.5rem;
   }
 }
 
@@ -229,6 +263,14 @@
       font-size: 1.2rem;
       width: auto;
       flex: 0 1 auto;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    gap: 2.5rem;
+    .btn {
+      font-size: 1.8rem;
+      padding: 1.4rem 3rem;
     }
   }
 }

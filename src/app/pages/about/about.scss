@@ -10,6 +10,11 @@
   @include m.respond-to(mobile) {
     padding-top: 6rem;
   }
+
+  // Tablet vertical adaptation
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding-top: 8rem;
+  }
 }
 
 .lead-text {
@@ -28,6 +33,12 @@
     padding: 1.5rem;
     font-size: 1.45rem;
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    max-width: 100%;
+    font-size: 1.8rem;
+    padding: 3rem;
+  }
 }
 
 // Vision Grid (Full Stack & AI)
@@ -36,6 +47,10 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2.5rem;
   margin-bottom: 5rem;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    grid-template-columns: 1fr 1fr;
+  }
 
   .vision-card {
     background: rgba(34, 63, 77, 0.7);
@@ -79,6 +94,10 @@
       font-size: 1.8rem;
       line-height: 1.6;
       color: v.$color-logo;
+
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        font-size: 1.6rem;
+      }
     }
   }
 }
@@ -91,6 +110,11 @@
   padding: 2rem;
   margin-bottom: 6rem;
   overflow: hidden;
+
+  // Tablets
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 3rem;
+  }
 
   h3 {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -119,6 +143,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 3rem;
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
 
     .phi-item {
       display: flex;
@@ -195,6 +224,10 @@
     padding-left: 2rem;
     contain: content;
 
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      padding-left: 4rem;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -219,6 +252,12 @@
       border-radius: 50%;
       border: 1px solid v.$accent;
       background: #f6973f;
+
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        left: -4rem;
+        width: 20px;
+        height: 20px;
+      }
 
       &.current {
         background: v.$color-logo;
@@ -309,6 +348,10 @@
   max-width: 400px;
   will-change: transform;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    max-width: 100%;
+  }
+
   .cert-info {
     display: flex;
     justify-content: space-between;
@@ -333,6 +376,10 @@
     background: rgba(34, 63, 77, 0.226);
     border-radius: 6px;
     overflow: hidden;
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      height: 200px;
+    }
 
     .cert-preview {
       width: 100%;
@@ -384,5 +431,8 @@
   .philosophy-items {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
+  }
+  .about-page {
+    padding-top: 4rem;
   }
 }

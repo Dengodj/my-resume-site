@@ -10,6 +10,11 @@
   @include m.respond-to(mobile) {
     padding: 2rem 0 2rem;
   }
+
+  // Tablet vertical adaptation
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding-top: 8rem;
+  }
 }
 
 .container-projects {
@@ -26,6 +31,11 @@
 
   @include m.respond-to(tablet) {
     margin-bottom: 3rem;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    max-width: 90%;
+    padding: 2rem 3rem;
   }
 }
 
@@ -61,6 +71,10 @@
   @include m.respond-to(mobile) {
     margin: 0 auto 2rem;
     text-align: center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    max-width: 100%;
   }
 }
 
@@ -119,6 +133,11 @@
       display: none;
     }
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    gap: 6rem;
+    padding: 3rem;
+  }
 }
 
 // CAPABILITIES SECTION
@@ -148,6 +167,11 @@
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+      padding: 0 2rem;
+    }
   }
 
   .cap-card {
@@ -300,6 +324,11 @@
   max-width: 1000px;
   position: relative;
 
+  // TABLETS
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 6rem auto;
+  }
+
   .cta-content {
     background: rgba(34, 63, 77, 0.685);
     backdrop-filter: blur(15px);
@@ -333,6 +362,10 @@
     position: relative;
     z-index: 1;
     letter-spacing: -1px;
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: 3rem;
+    }
   }
 
   .cta-subtitle {

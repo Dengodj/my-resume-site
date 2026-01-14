@@ -1,4 +1,5 @@
 @use '../../../../styles/abstracts/variables' as v;
+@use '../../../../styles/abstracts/mixins' as m;
 @use 'sass:color';
 
 .language-switcher {
@@ -7,25 +8,46 @@
   align-items: center;
   flex-shrink: 0;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    gap: 0.8rem;
+  }
+
   button {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.5rem 0.6rem;
+    padding: 0.5rem 0.8rem;
     font-size: 1.4rem;
     font-weight: 500;
     color: v.$color-logo;
     border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: 1.6rem;
+      padding: 0.6rem 1rem;
+    }
+
+    @media screen and (max-height: 500px) and (orientation: landscape) {
+      padding: 0.4rem 0.6rem;
+      font-size: 1.3rem;
+    }
 
     &.active {
       color: v.$color-background;
       background-color: v.$accent;
       font-weight: 700;
+      box-shadow: 0 2px 8px rgba(v.$accent, 0.3);
     }
 
     &:hover:not(.active) {
       background-color: color.adjust(v.$accent, $alpha: -0.8);
+      color: v.$accent;
+    }
+
+    &:active:not(.active) {
+      transform: scale(0.95);
     }
   }
 }
