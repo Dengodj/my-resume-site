@@ -2,7 +2,7 @@
 @use '../../../../styles/abstracts/mixins' as m;
 @use 'sass:color';
 
-// FORCE DARK
+// FORCE DARK (for 404/space)
 :host.force-dark {
   .main-header {
     background-color: #060b1bc4 !important;
@@ -43,6 +43,7 @@
   height: 100%;
   width: 100%;
   margin: 0 auto;
+  padding: 0 2rem;
 
   @include m.respond-to(mobile) {
     padding: 0 1.5rem;
@@ -74,14 +75,14 @@
       filter: brightness(1.1);
     }
 
-    @include m.respond-to(mobile) {
+    @media screen and (max-width: 1024px) {
       font-size: 1.8rem;
       letter-spacing: 0.6rem;
     }
   }
 }
 
-// NAVIGATION ACTIONS
+// NAVIGATION ACTIONS (Desktop)
 .header-right-actions {
   display: flex;
   align-items: center;
@@ -92,13 +93,13 @@
     align-items: center;
     gap: 3rem;
 
-    @include m.respond-to(mobile) {
-      display: none;
+    @media screen and (max-width: 1024px) {
+      display: none !important;
     }
   }
 }
 
-// HAMBURGER
+// HAMBURGER ICON
 .hamburger-icon {
   display: none;
   background: none;
@@ -114,6 +115,10 @@
   box-sizing: content-box;
   outline: none;
   -webkit-tap-highlight-color: transparent;
+
+  @media screen and (max-width: 1024px) {
+    display: flex;
+  }
 
   .bar {
     display: block;
@@ -135,14 +140,10 @@
       transform: translateY(-9px) rotate(-45deg);
     }
   }
-
-  @include m.respond-to(mobile) {
-    display: flex;
-  }
 }
 
-// MOBILE & TABLET LOGIC
-@include m.respond-to(mobile) {
+// MOBILE & TABLET MENU LOGIC
+@media screen and (max-width: 1024px) {
   .mobile-menu-overlay {
     position: fixed;
     inset: 0;
@@ -165,7 +166,7 @@
     left: 0;
     width: 280px;
     height: 100vh;
-    background: #0635509f;
+    background: #06355071;
     box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
     z-index: 1100;
     transform: translateX(-100%);
@@ -174,8 +175,17 @@
     display: flex;
     flex-direction: column;
 
+    visibility: hidden;
+    pointer-events: none;
+
     &.open {
       transform: translateX(0);
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    @media (min-width: 768px) {
+      width: 350px;
     }
   }
 
@@ -184,19 +194,6 @@
     flex-direction: column;
     min-height: 100%;
     padding: 80px 1.5rem 2rem;
-  }
-
-  // PORTRAIT TABLET
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .mobile-menu {
-      width: 350px;
-    }
-    .mobile-menu-content {
-      padding-top: 100px;
-    }
-    ::ng-deep .nav-list {
-      gap: 2.5rem !important;
-    }
   }
 
   .mobile-menu app-nav-bar {
@@ -223,11 +220,6 @@
       border-radius: 6px;
       text-decoration: none;
       font-size: 1.4rem;
-      transition: background 0.2s;
-
-      &:active {
-        background-color: #e2e8f0;
-      }
     }
 
     .btn-primary {
@@ -242,7 +234,7 @@
     }
   }
 
-  // LANDSCAPE OPTIMIZATION
+  // Landscape (right)
   @media (orientation: landscape) and (max-height: 500px) {
     .mobile-menu {
       width: 400px;
@@ -255,7 +247,6 @@
       .email-link,
       .btn-primary {
         flex: 1;
-        font-size: 1.1rem;
         padding: 10px;
       }
     }
@@ -280,16 +271,17 @@
     transform: scale(1.1) rotate(15deg);
   }
 
-  @include m.respond-to(mobile) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 }
 
-// DESKTOP SAFETY
+// FINAL SAFETY CHECK
 @media screen and (min-width: 1025px) {
   .mobile-menu,
   .mobile-menu-overlay,
-  .theme-toggle-mobile {
+  .theme-toggle-mobile,
+  .hamburger-icon {
     display: none !important;
   }
 }
