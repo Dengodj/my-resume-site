@@ -87,38 +87,48 @@
   @media screen and (max-height: 450px) and (orientation: landscape) {
     flex-direction: row !important;
     flex-wrap: nowrap;
-    gap: 1rem;
-    padding: 0.5rem 1.5rem !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.4rem 2rem !important;
+    gap: 1.5rem;
 
-    & > div {
-      flex: 1 !important;
-      width: auto !important;
+    .footer-social {
+      order: 1;
+      gap: 1.2rem;
+      justify-content: flex-start;
+
+      i {
+        font-size: 1.4rem !important;
+      }
     }
 
     .footer-center {
       order: 2;
-      font-size: 0.9rem;
-    }
-
-    .footer-social {
-      order: 1;
-      gap: 1.5rem;
-      justify-content: flex-start;
-    }
-
-    .footer-info {
-      order: 3;
-      justify-content: flex-end;
+      flex: 2;
     }
 
     .footer-copy,
     .footer-credit {
-      font-size: 0.85rem !important;
+      font-size: 0.75rem !important;
+      margin: 0 !important;
+      display: inline-block;
+      white-space: nowrap;
     }
+
     .footer-icon,
     .angular-logo {
-      width: 16px;
-      height: 16px;
+      width: 14px !important;
+      height: 14px !important;
+    }
+  }
+
+  .footer-info {
+    order: 3;
+    justify-content: flex-end;
+    padding-right: 60px;
+
+    span {
+      font-size: 0.8rem !important;
     }
   }
 }
