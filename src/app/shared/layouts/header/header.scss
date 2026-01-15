@@ -143,7 +143,6 @@
 }
 
 // MOBILE & TABLET MENU LOGIC
-// MOBILE & TABLET MENU LOGIC
 @media screen and (max-width: 1024px) {
   .mobile-menu-overlay {
     position: fixed;
@@ -168,6 +167,8 @@
     width: 280px;
     height: 70vh;
     background: #063550a8;
+    border-bottom-right-radius: 20px;
+    border-bottom: 1px solid rgba(v.$color-logo, 0.1);
     box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
     z-index: 1100;
     transform: translateX(-100%);
@@ -193,8 +194,12 @@
   .mobile-menu-content {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
-    padding: 80px 1.5rem 2rem;
+    height: 100%;
+    padding: 40px 1.5rem 2rem;
+
+    @media screen and (max-width: 480px) {
+      padding-top: 30px;
+    }
   }
 
   .mobile-menu app-nav-bar {
@@ -244,13 +249,12 @@
     }
 
     .mobile-menu-content {
-      padding: 20px 1.5rem 1rem !important;
-      justify-content: center;
+      padding: 15px 1.5rem 10px !important;
+      justify-content: flex-start;
     }
 
     .theme-toggle-mobile {
-      margin-bottom: 0.5rem !important;
-      align-self: flex-start;
+      margin-bottom: 0.3rem !important;
 
       button {
         padding: 0.4rem 0.8rem !important;
@@ -261,8 +265,8 @@
     .mobile-menu app-nav-bar ::ng-deep .nav-list {
       display: grid !important;
       grid-template-columns: 1fr 1fr !important;
-      gap: 0.5rem 1.5rem !important;
-      margin-bottom: 1rem !important;
+      gap: 0.3rem 1.5rem !important;
+      margin-bottom: 0.5rem !important;
 
       .nav-item {
         margin: 0 !important;
@@ -275,9 +279,10 @@
 
     .mobile-contact {
       margin-top: 0 !important;
-      padding-top: 0.8rem !important;
+      padding-top: 0.4rem !important;
       flex-direction: row !important;
       gap: 1rem !important;
+      border-top: 1px solid rgba(v.$color-logo, 0.1);
 
       .email-link,
       .btn-primary {
